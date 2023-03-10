@@ -39,3 +39,11 @@
 .MEMOTESTFLIP > .BACKPART {
   transform: rotateY(180deg);
 }
+.CUSTOM-SCROLL::-webkit-scrollbar {
+  width: 10px;
+  background-color: gray;
+}
+.CUSTOM-SCROLL::-webkit-scrollbar-thumb {
+  background-color: #282828;
+  border-radius: 2px;
+}

@@ -15,11 +15,8 @@ const medium = [
   '/memotest/personatirada.jpg',
   '/memotest/gatoconlentes.jpg',
   '/memotest/patopikete.png',
-  '/memotest/fantasma.png',
+  '/memotest/fantasma.jpg',
   '/memotest/gatitouwu.jpg',
-  '/memotest/dino.jpg',
-  '/memotest/dino.jpg',
-  '/memotest/dino.jpg',
   '/memotest/dino.jpg'
 ].flatMap(el => [`a|${el}`, `b|${el}`]).sort(() => (Math.random() - 0.5))
 
@@ -31,7 +28,7 @@ const hard = [
   '/memotest/personatirada.jpg',
   '/memotest/gatoconlentes.jpg',
   '/memotest/patopikete.png',
-  '/memotest/fantasma.png',
+  '/memotest/fantasma.jpg',
   '/memotest/gatitouwu.jpg',
   '/memotest/dino.jpg'
 ].flatMap(el => [`a|${el}`, `b|${el}`]).sort(() => (Math.random() - 0.5))

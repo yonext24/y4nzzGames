@@ -19,8 +19,9 @@ export function MemotestCard ({ handleClick, data, showing, lastGuessed }) {
     }
   }, [showing])
 
-  return <div onClick={() => handleClick(data.key)} className={`MEMOTESTFLIP cursor-pointer grid place-content-center text-3xl transition-colors
-  ${!showing ? 'bg-gray-200' : 'bg-white FLIPPED'} ${animating ? 'SCALING' : ''} border border-black rounded-md select-none aspect-[12/16]`}>
+  return <div onClick={() => handleClick(data.key)} className={`MEMOTESTFLIP w-[calc(20%-.6rem)] cursor-pointer grid place-content-center text-3xl transition-colors
+  ${!showing ? 'bg-gray-200' : 'bg-white FLIPPED'} ${animating ? 'SCALING' : ''} border border-black rounded-md select-none aspect-[14/16]
+  max-[950px]:w-[calc(25%-.6rem)] max-[650px]:w-[calc(33%-.5rem)]`}>
 
     <div className='BACKPART h-full flex overflow-hidden rounded-md bg-white'>
     {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export function CountDown ({ setCountDown, setPlaying }) {
-  const [timing, setTiming] = useState(1)
+  const [timing, setTiming] = useState(3)
 
   useEffect(() => {
     if (timing <= 0) {
