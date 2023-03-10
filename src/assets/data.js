@@ -1,13 +1,16 @@
-const easy = [
+import { sortFunction } from '../utils/sortFunction'
+import { flatMapFunction } from '../utils/flatMapFunction'
+
+const easy = sortFunction(flatMapFunction([
   '/memotest/ok.jpg',
   '/memotest/gatotriste.jpg',
   '/memotest/gatopikete.jpg',
   '/memotest/personatriste.jpg',
   '/memotest/personatirada.jpg',
   '/memotest/gatoconlentes.jpg'
-].flatMap(el => [`a|${el}`, `b|${el}`]).sort(() => (Math.random() - 0.5))
+]))
 
-const medium = [
+const medium = sortFunction(flatMapFunction([
   '/memotest/ok.jpg',
   '/memotest/gatotriste.jpg',
   '/memotest/gatopikete.jpg',
@@ -18,9 +21,9 @@ const medium = [
   '/memotest/fantasma.jpg',
   '/memotest/gatitouwu.jpg',
   '/memotest/dino.jpg'
-].flatMap(el => [`a|${el}`, `b|${el}`]).sort(() => (Math.random() - 0.5))
+]))
 
-const hard = [
+const hard = sortFunction(flatMapFunction([
   '/memotest/ok.jpg',
   '/memotest/gatotriste.jpg',
   '/memotest/gatopikete.jpg',
@@ -31,7 +34,7 @@ const hard = [
   '/memotest/fantasma.jpg',
   '/memotest/gatitouwu.jpg',
   '/memotest/dino.jpg'
-].flatMap(el => [`a|${el}`, `b|${el}`]).sort(() => (Math.random() - 0.5))
+]))
 
 export const data = {
   easy,

@@ -24,9 +24,7 @@ export function MemotestCard ({ handleClick, data, showing, lastGuessed }) {
   max-[950px]:w-[calc(25%-.6rem)] max-[650px]:w-[calc(33%-.5rem)]`}>
 
     <div className='BACKPART h-full flex overflow-hidden rounded-md bg-white'>
-    {
-      showing && <img draggable={false} src={data.el} className='object-contain my-auto' />
-    }
+      <img draggable={false} src={data.el} className='object-contain my-auto' />
     </div>
 
     <div className='FRONTPART h-full w-full place-content-center overflow-hidden'>

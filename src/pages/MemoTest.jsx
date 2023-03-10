@@ -3,6 +3,8 @@ import { CountDown } from '../components/CountDown'
 import { MemotestGame } from '../components/MemotestGame'
 import { DownArrow } from '../icons/DownArrow'
 import { UpArrow } from '../icons/UpArrow'
+import { DoubleDownArrow } from '../icons/DoubleDownArrow'
+import { DoubleUpArrow } from '../icons/DoubleUpArrow'
 import { timerParser } from '../utils/timerParser'
 
 export function MemoTest () {
@@ -10,13 +12,6 @@ export function MemoTest () {
   const [countDown, setCountDown] = useState(false)
   const [difficulty, setDifficulty] = useState('easy')
   const [timer, setTimer] = useState(90)
-
-  const handleUp = () => {
-    setTimer(prev => prev + 1)
-  }
-  const handleDown = () => {
-    setTimer(prev => prev - 1)
-  }
 
   return <main className='mx-auto w-full h-full flex flex-col overflow-hidden'>
     {
@@ -40,8 +35,12 @@ export function MemoTest () {
         <div className='font-bold flex items-center gap-x-4 rounded-md overflow-hidden'>
           <div className='bg-blue-900 px-6 py-4 h-full flex items-center justify-center w-[100px]'><span>{timerParser(timer)}</span></div>
           <div className='flex flex-col bg-blue-900 px-4 py-4'>
-            <button onClick={handleUp}><UpArrow /></button>
-            <button onClick={handleDown}><DownArrow /></button>
+            <button onClick={() => setTimer(prev => prev + 1)}><UpArrow /></button>
+            <button onClick={() => setTimer(prev => prev - 1)}><DownArrow /></button>
+          </div>
+          <div className='flex flex-col bg-blue-900 px-4 py-4'>
+            <button onClick={() => setTimer(prev => prev + 15)}><DoubleUpArrow /></button>
+            <button onClick={() => setTimer(prev => prev - 15)}><DoubleDownArrow /></button>
           </div>
         </div>
 
