@@ -28,7 +28,7 @@ export function MemotestCard ({ handleClick, data, showing, lastGuessed }) {
     </div>
 
     <div className='FRONTPART h-full w-full place-content-center overflow-hidden'>
-      <img draggable={false} src='/memotest/backimage.jpg' className='object-cover h-full rounded-md w-full scale-110' />
+      <img draggable={false} src='/memotest/backimage.webp' className='object-cover h-full rounded-md w-full scale-110' />
     </div>
   </div>
 }
